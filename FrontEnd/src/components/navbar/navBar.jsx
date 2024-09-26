@@ -1,14 +1,14 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react';
+import React from 'react'
 
-function Header() {
+function navBar() {
   return (
-    <div className='h-14 bg-gray-200 inline-flex w-full items-center justify-between px-10'>
-      <div className=''>
-        <h1 className='text-custom-pink text-4xl font-extrabold'>Smile <span className='text-black text-4xl font-extrabold font-ReggaeOne'>G</span>irl</h1>
+    <div className='container h-14 bg-white inline-flex w-full items-center justify-between '>
+      <div className='inline-flex'>
+        <h1 className='text-custom-pink md:text-2xl font-extrabold lg:text-4xl'>Smile <span className='text-black md:text-2xl font-extrabold lg:text-4xl  font-ReggaeOne'>G</span>irl</h1>
       </div>
       <nav >
-        <ul className='inline-flex space-x-10 font-medium '>
+        <ul className='inline-flex space-x-10 font-medium md:flex hidden'>
           <li><a href="/" className=''>Home</a></li>
           <li><a href="/shop" className=''>Shop</a></li>
           <li><a href="/customize" className=''>Customize</a></li>
@@ -17,7 +17,7 @@ function Header() {
         </ul>
       </nav>
       <nav className='items-end'>
-        <ul className='inline-flex space-x-5'>
+        <ul className='inline-flex space-x-5 md:text-2l font-extrabold lg:text-5'>
           <li><a href="/" className=''><i className='fas fa-search'></i></a></li>
           <li><a href="/products" className=''><i className='fas fa-shopping-cart'></i></a></li>
           <li><a href="/about" className=''><i className='fas fa-heart'></i></a></li>
@@ -25,7 +25,7 @@ function Header() {
         </ul>
       </nav>
     </div>
-  );
+  )
 }
 
-export default Header;  
+export default navBar
