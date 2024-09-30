@@ -15,14 +15,7 @@ export default {
       },
       container: {
         center: true,
-        padding: {
-          DEFAULT: '1rem',
-          sm: '2rem',
-          lg: '3rem',
-          xl: '5rem',
-          xs: '1rem',
-          '2xl': '6rem',
-        },
+       
       },
     },
   },
