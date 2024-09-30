@@ -9,7 +9,7 @@ function NavBar() {
   };
 
   return (
-    <div className="container inline-flex items-center justify-between w-full bg-white h-14" >
+    <div className=" inline-flex items-center justify-between w-full bg-white h-14 lg:px-26 xl:px-26 sm:px-12 md:px-20 px-12 " >
       <div className="inline-flex">
         <h1 className="text-xl font-extrabold text-custom-pink sm:text-2xl md:text-3xl lg:text-4xl">
           Smile{" "}
