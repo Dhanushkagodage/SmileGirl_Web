@@ -1,5 +1,6 @@
-// eslint-disable-next-line no-unused-vars
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,7 +10,7 @@ function NavBar() {
   };
 
   return (
-    <div className=" inline-flex items-center justify-between w-full bg-white h-14 lg:px-26 xl:px-26 sm:px-12 md:px-20 px-12 " >
+    <div className="inline-flex items-center justify-between w-full bg-white h-14 lg:px-26 xl:px-26 sm:px-12 md:px-20 px-12">
       <div className="inline-flex">
         <h1 className="text-xl font-extrabold text-custom-pink sm:text-2xl md:text-3xl lg:text-4xl">
           Smile{" "}
@@ -24,29 +25,29 @@ function NavBar() {
       <nav className="hidden lg:flex">
         <ul className="inline-flex space-x-10 font-medium">
           <li>
-            <a href="/" className="text-sm sm:text-base md:text-lg lg:text-xl">
+            <Link to="/" className="text-sm sm:text-base md:text-lg lg:text-xl">
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/shop" className="text-sm sm:text-base md:text-lg lg:text-xl">
+            <Link to="/shop" className="text-sm sm:text-base md:text-lg lg:text-xl">
               Shop
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/customize" className="text-sm sm:text-base md:text-lg lg:text-xl">
+            <Link to="/customize" className="text-sm sm:text-base md:text-lg lg:text-xl">
               Customize
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/about" className="text-sm sm:text-base md:text-lg lg:text-xl">
+            <Link to="/about" className="text-sm sm:text-base md:text-lg lg:text-xl">
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/contact" className="text-sm sm:text-base md:text-lg lg:text-xl">
+            <Link to="/contact" className="text-sm sm:text-base md:text-lg lg:text-xl">
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
@@ -55,24 +56,24 @@ function NavBar() {
       <nav className="items-end">
         <ul className="inline-flex space-x-5 text-sm font-extrabold sm:text-base md:text-lg lg:text-xl">
           <li>
-            <a href="/" className="">
+            <Link to="/" className="">
               <i className="fas fa-search"></i>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/products" className="">
+            <Link to="/products" className="">
               <i className="fas fa-shopping-cart"></i>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/about" className="">
+            <Link to="/about" className="">
               <i className="fas fa-heart"></i>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/contact" className="">
+            <Link to="/contact" className="">
               <i className="fas fa-user"></i>
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
@@ -87,29 +88,29 @@ function NavBar() {
         <nav className="absolute left-0 w-full bg-white top-14 lg:hidden">
           <ul className="flex flex-col items-center space-y-5 text-base font-medium sm:text-lg md:text-xl">
             <li>
-              <a href="/" className="">
+              <Link to="/" className="">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/shop" className="">
+              <Link to="/shop" className="">
                 Shop
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/customize" className="">
+              <Link to="/customize" className="">
                 Customize
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/about" className="">
+              <Link to="/about" className="">
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/contact" className="">
+              <Link to="/contact" className="">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
