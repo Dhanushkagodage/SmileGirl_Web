@@ -1,16 +1,33 @@
-/* eslint-disable no-unused-vars */
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import FavouriteDrawer from "../favouritedrawer/favouriteDrawer";
+import ShopcartDrawer from "../shopcartdrawer/shopcartDrawer";
+import LoginCard from "../login/loginCard";
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isfavDrawerOpen, setIsfavDrawerOpen] = useState(false);
+  const [iscartDrawerOpen, setIsCartDrawerOpen] = useState(false);
+  const [isLoginCardOpen, setIsLoginCardOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  const toggleFavDrawer = () => {
+    setIsfavDrawerOpen(!isfavDrawerOpen);
+  };
+
+  const toggleCartDrawer = () => {
+    setIsCartDrawerOpen(!iscartDrawerOpen);
+  };
+
+  const toggleLoginCard = () => {
+    setIsLoginCardOpen(!isLoginCardOpen);
+  };
 
   return (
-    <div className="inline-flex items-center justify-between w-full bg-white h-14 lg:px-26 xl:px-26 sm:px-12 md:px-20 px-12">
+    <div className="relative inline-flex items-center justify-between w-full bg-white h-14 lg:px-26 xl:px-26 sm:px-12 md:px-20 px-12">
       <div className="inline-flex">
         <h1 className="text-xl font-extrabold text-custom-pink sm:text-2xl md:text-3xl lg:text-4xl">
           Smile{" "}
@@ -24,31 +41,56 @@ function NavBar() {
       {/* First nav - visible on lg screens */}
       <nav className="hidden lg:flex">
         <ul className="inline-flex space-x-10 font-medium">
-          <li>
-            <Link to="/" className="text-sm sm:text-base md:text-lg lg:text-xl">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/shop" className="text-sm sm:text-base md:text-lg lg:text-xl">
-              Shop
-            </Link>
-          </li>
-          <li>
-            <Link to="/customize" className="text-sm sm:text-base md:text-lg lg:text-xl">
-              Customize
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" className="text-sm sm:text-base md:text-lg lg:text-xl">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" className="text-sm sm:text-base md:text-lg lg:text-xl">
-              Contact
-            </Link>
-          </li>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `text-lg ${
+                isActive ? "underline underline-offset-4 " : ""
+              }`
+            }
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/shop"
+            className={({ isActive }) =>
+              `text-lg ${
+                isActive ?"underline underline-offset-4 " : ""
+              }`
+            }
+          >
+            Shop
+          </NavLink>
+          <NavLink
+            to="/customize"
+            className={({ isActive }) =>
+              `text-lg ${
+                isActive ? "underline underline-offset-4 " : ""
+              }`
+            }
+          >
+            Customize
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              `text-lg ${
+                isActive ? "underline underline-offset-4 " : ""
+              }`
+            }
+          >
+            About
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              `text-lg ${
+                isActive ? "underline underline-offset-4 " : ""
+              }`
+            }
+          >
+            Contact
+          </NavLink>
         </ul>
       </nav>
 
@@ -61,31 +103,35 @@ function NavBar() {
             </Link>
           </li>
           <li>
-            <Link to="/products" className="">
+            <button onClick={toggleCartDrawer} className="text-black">
+              {" "}
+              {/* Button to open the drawer */}
               <i className="fas fa-shopping-cart"></i>
-            </Link>
+            </button>
           </li>
           <li>
-            <Link to="/about" className="">
+            <button onClick={toggleFavDrawer} className="text-black">
+              {" "}
+              {/* Button to open the drawer */}
               <i className="fas fa-heart"></i>
-            </Link>
+            </button>
           </li>
           <li>
-            <Link to="/contact" className="">
+            <button onClick={toggleLoginCard} className="text-black">
               <i className="fas fa-user"></i>
-            </Link>
+            </button>
           </li>
         </ul>
       </nav>
 
       {/* Menu button for small screens */}
-      <button className="block lg:hidden" onClick={toggleMenu}>
+      <button className="block lg:hidden z-50" onClick={toggleMenu}>
         <i className="fas fa-bars"></i>
       </button>
 
       {/* Mobile menu - visible only on small and medium screens */}
       {isMenuOpen && (
-        <nav className="absolute left-0 w-full bg-white top-14 lg:hidden">
+        <nav className="absolute left-0 w-full bg-white top-14 lg:hidden z-40">
           <ul className="flex flex-col items-center space-y-5 text-base font-medium sm:text-lg md:text-xl">
             <li>
               <Link to="/" className="">
@@ -115,6 +161,15 @@ function NavBar() {
           </ul>
         </nav>
       )}
+      <FavouriteDrawer
+        isOpen={isfavDrawerOpen}
+        toggleFavDrawer={toggleFavDrawer}
+      />
+      <ShopcartDrawer
+        isOpen={iscartDrawerOpen}
+        toggleCartDrawer={toggleCartDrawer}
+      />
+      <LoginCard isOpen={isLoginCardOpen} toggleLoginCard={toggleLoginCard} />
     </div>
   );
 }

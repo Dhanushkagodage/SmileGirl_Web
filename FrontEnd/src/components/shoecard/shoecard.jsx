@@ -2,13 +2,16 @@
 import React from 'react';
 import Image from '../../assets/1.jpg';
 import { FaRegHeart , FaRegEye  } from 'react-icons/fa';
+import AboutShoe from '../../pages/aboutShoe';
+import { useNavigate } from 'react-router-dom';
 
 
 function Shoecard() {
   const rating = 4;
+  const navigate = useNavigate();
 
   return (
-    <div className="w-full p-8">
+    <div className="w-full p-8" onClick={() => navigate('/aboutShoe')}>
       <div className="grid h-fit shadow-[0_0_10px_0_rgba(0,0,0,0.2)] relative">
         {/* image row */}
         <div className="relative h-fit">

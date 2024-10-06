@@ -5,7 +5,8 @@ import Layout from '../components/layout/layout'
 function aboutPage() {
   return (
     <Layout>
-      <h1>About</h1>
+      <div className=" h-screen z-50 bg-slate-500
+      "></div>
     </Layout>
   )
 }
