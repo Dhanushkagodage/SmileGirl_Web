@@ -1,16 +1,61 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import FavouriteDrawer from "../../pages/user/components/favouritedrawer/favouriteDrawer";
+import ShopcartDrawer from "../../pages/user/components/shopcartdrawer/shopcartDrawer";
+import LoginCard from "../login/loginCard";
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isfavDrawerOpen, setIsfavDrawerOpen] = useState(false);
+  const [iscartDrawerOpen, setIsCartDrawerOpen] = useState(false);
+  const [isLoginCardOpen, setIsLoginCardOpen] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
 
+  const navigate = useNavigate();
+
+  // Load the admin mode from localStorage when the component mounts
+  useEffect(() => {
+    const savedMode = localStorage.getItem("isAdmin");
+    if (savedMode) {
+      setIsAdmin(JSON.parse(savedMode));
+    }
+    
+  
+  }, []);
+  
+
+  // Toggle the menu
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const toggleFavDrawer = () => {
+    setIsfavDrawerOpen(!isfavDrawerOpen);
+  };
+
+  const toggleCartDrawer = () => {
+    setIsCartDrawerOpen(!iscartDrawerOpen);
+  };
+
+  const toggleLoginCard = () => {
+    setIsLoginCardOpen(!isLoginCardOpen);
+  };
+
+  // Toggle between User and Admin mode and save it in localStorage
+  const toggleUserMode = () => {
+    const newMode = !isAdmin;
+    setIsAdmin(newMode);
+    localStorage.setItem("isAdmin", JSON.stringify(newMode)); // save the new mode to localStorage
+    if (newMode) {
+      navigate("/dashboard");
+    } else {
+      navigate("/");
+    }
+  };
+
   return (
-    <div className="inline-flex items-center justify-between w-full bg-white h-14 lg:px-26 xl:px-26 sm:px-12 md:px-20 px-12">
+    <div className="relative inline-flex items-center justify-between w-full bg-white h-14 lg:px-26 xl:px-26 sm:px-12 md:px-20 px-12">
       <div className="inline-flex">
         <h1 className="text-xl font-extrabold text-custom-pink sm:text-2xl md:text-3xl lg:text-4xl">
           Smile{" "}
@@ -24,31 +69,85 @@ function NavBar() {
       {/* First nav - visible on lg screens */}
       <nav className="hidden lg:flex">
         <ul className="inline-flex space-x-10 font-medium">
-          <li>
-            <Link to="/" className="text-sm sm:text-base md:text-lg lg:text-xl">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/shop" className="text-sm sm:text-base md:text-lg lg:text-xl">
-              Shop
-            </Link>
-          </li>
-          <li>
-            <Link to="/customize" className="text-sm sm:text-base md:text-lg lg:text-xl">
-              Customize
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" className="text-sm sm:text-base md:text-lg lg:text-xl">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" className="text-sm sm:text-base md:text-lg lg:text-xl">
-              Contact
-            </Link>
-          </li>
+          {!isAdmin ? (
+            <>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  `text-lg ${isActive ? "underline underline-offset-4 " : ""}`
+                }
+              >
+                Home
+              </NavLink>
+              <NavLink
+                to="/shop"
+                className={({ isActive }) =>
+                  `text-lg ${isActive ? "underline underline-offset-4 " : ""}`
+                }
+              >
+                Shop
+              </NavLink>
+              <NavLink
+                to="/customize"
+                className={({ isActive }) =>
+                  `text-lg ${isActive ? "underline underline-offset-4 " : ""}`
+                }
+              >
+                Customize
+              </NavLink>
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  `text-lg ${isActive ? "underline underline-offset-4 " : ""}`
+                }
+              >
+                About
+              </NavLink>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  `text-lg ${isActive ? "underline underline-offset-4 " : ""}`
+                }
+              >
+                Contact
+              </NavLink>
+            </>
+          ) : (
+            <>
+              <NavLink
+                to="/dashboard"
+                className={({ isActive }) =>
+                  `text-lg ${isActive ? "underline underline-offset-4 " : ""}`
+                }
+              >
+                Dashboard
+              </NavLink>
+              <NavLink
+                to="/allproducts"
+                className={({ isActive }) =>
+                  `text-lg ${isActive ? "underline underline-offset-4 " : ""}`
+                }
+              >
+                All Products
+              </NavLink>
+              <NavLink
+                to="/orderslist"
+                className={({ isActive }) =>
+                  `text-lg ${isActive ? "underline underline-offset-4 " : ""}`
+                }
+              >
+                Orders List
+              </NavLink>
+              <NavLink
+                to="/addproduct"
+                className={({ isActive }) =>
+                  `text-lg ${isActive ? "underline underline-offset-4 " : ""}`
+                }
+              >
+                Add Product
+              </NavLink>
+            </>
+          )}
         </ul>
       </nav>
 
@@ -60,61 +159,112 @@ function NavBar() {
               <i className="fas fa-search"></i>
             </Link>
           </li>
+          {!isAdmin && (
+            <>
+              <li>
+                <button onClick={toggleCartDrawer} className="text-black">
+                  {" "}
+                  <i className="fas fa-shopping-cart"></i>
+                </button>
+              </li>
+              <li>
+                <button onClick={toggleFavDrawer} className="text-black">
+                  {" "}
+                  <i className="fas fa-heart"></i>
+                </button>
+              </li>
+            </>
+          )}
           <li>
-            <Link to="/products" className="">
-              <i className="fas fa-shopping-cart"></i>
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" className="">
-              <i className="fas fa-heart"></i>
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" className="">
+            <button onClick={toggleLoginCard} className="text-black">
               <i className="fas fa-user"></i>
-            </Link>
+            </button>
+          </li>
+          <li>
+            <button
+              onClick={toggleUserMode}
+              className="text-white bg-black py-1 px-5 text-[16px]"
+            >
+              {isAdmin ? "ADMIN" : "USER"}
+            </button>
           </li>
         </ul>
       </nav>
 
       {/* Menu button for small screens */}
-      <button className="block lg:hidden" onClick={toggleMenu}>
+      <button className="block lg:hidden z-50" onClick={toggleMenu}>
         <i className="fas fa-bars"></i>
       </button>
 
       {/* Mobile menu - visible only on small and medium screens */}
       {isMenuOpen && (
-        <nav className="absolute left-0 w-full bg-white top-14 lg:hidden">
+        <nav className="absolute left-0 w-full bg-white top-14 lg:hidden z-40">
           <ul className="flex flex-col items-center space-y-5 text-base font-medium sm:text-lg md:text-xl">
-            <li>
-              <Link to="/" className="">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/shop" className="">
-                Shop
-              </Link>
-            </li>
-            <li>
-              <Link to="/customize" className="">
-                Customize
-              </Link>
-            </li>
-            <li>
-              <Link to="/about" className="">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" className="">
-                Contact
-              </Link>
-            </li>
+            {!isAdmin ? (
+              <>
+                <li>
+                  <Link to="/" className="">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/shop" className="">
+                    Shop
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/customize" className="">
+                    Customize
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/about" className="">
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/contact" className="">
+                    Contact
+                  </Link>
+                </li>
+              </>
+            ) : (
+              <>
+                <li>
+                  <Link to="/dashboard" className="">
+                    Dashboard
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/allproducts" className="">
+                    All Products
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/orderslist" className="">
+                    Orders List
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/addproduct" className="">
+                    Add Product
+                  </Link>
+                </li>
+              </>
+            )}
           </ul>
         </nav>
       )}
+
+      <FavouriteDrawer
+        isOpen={isfavDrawerOpen}
+        toggleFavDrawer={toggleFavDrawer}
+      />
+      <ShopcartDrawer
+        isOpen={iscartDrawerOpen}
+        toggleCartDrawer={toggleCartDrawer}
+      />
+      <LoginCard isOpen={isLoginCardOpen} toggleLoginCard={toggleLoginCard} />
     </div>
   );
 }
