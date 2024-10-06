@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import homepageBg from "../assets/homepagebg.png";
-import Layout from "../components/layout/layout";
-import Shoecard from "../components/shoecard/shoecard";
+import homepageBg from "../../../assets/homepagebg.png";
+import Layout from "../../../components/layout/layout";
+import Shoecard from "../../../components/shoecard/shoecard";
 
 function HomePage() {
   return (

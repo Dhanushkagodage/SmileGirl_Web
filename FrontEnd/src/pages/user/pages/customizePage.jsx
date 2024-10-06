@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import Layout from "../components/layout/layout";
+import Layout from "../../../components/layout/layout";
 
 function customizePage() {
   return (

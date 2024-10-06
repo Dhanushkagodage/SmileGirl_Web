@@ -1,11 +1,11 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-import Image from "../../../assets/1.jpg";
+import Image from "../../../../../assets/1.jpg";
 
-function favouriteCard() {
+function shoecartCard() {
   const rating = 4;
   return (
-    <div className="grid grid-flow-col px-6 py-2 border-b-2 border-gray-200 items-start ">
+    <div className="grid grid-flow-col px-6 py-2 border-b-2 border-gray-200 items-start " >
       {/* image */}
       <div className="">
         <img
@@ -44,10 +44,10 @@ function favouriteCard() {
       </div>
       {/* icon */}
       <div className="justify-self-end ">
-        <i className="fas fa-heart text-custom-pink"></i>
+        <i className="fa-solid fa-trash text-custom-pink"></i>
       </div>
     </div>
   );
 }
 
-export default favouriteCard;
+export default shoecartCard;

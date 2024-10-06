@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
-import Layout from "../components/layout/layout";
-import shopbgimage from "../assets/shoppagebg.png";
-import Shoecard from "../components/shoecard/shoecard";
-import Pagination from "../components/pagination/pagination";
+import Layout from "../../../components/layout/layout";
+import shopbgimage from "../../../assets/shoppagebg.png";
+import Shoecard from "../../../components/shoecard/shoecard";
+import Pagination from "../../../components/pagination/pagination";
 
 function ShopPage() {
   const [selectedOption, setSelectedOption] = useState("");

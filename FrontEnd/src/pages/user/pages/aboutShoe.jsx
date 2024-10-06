@@ -3,14 +3,14 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
-import Layout from "../components/layout/layout";
-import Image from "../assets/1.jpg";
+import Layout from "../../../components/layout/layout";
+import Image from "../../../assets/1.jpg";
 import { FaEnvelope, FaWhatsapp } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
-import Footer from "../components/footer/Footer";
+import Footer from "../../../components/footer/Footer";
 import FavouriteDrawer from "../components/favouritedrawer/favouriteDrawer";
 import ShopcartDrawer from "../components/shopcartdrawer/shopcartDrawer";
-import LoginCard from "../components/login/loginCard";
+import LoginCard from "../../../components/login/loginCard";
 
 function aboutShoe() {
   const rating = 4;

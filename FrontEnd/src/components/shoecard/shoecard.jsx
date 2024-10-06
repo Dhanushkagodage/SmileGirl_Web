@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from '../../assets/1.jpg';
 import { FaRegHeart , FaRegEye  } from 'react-icons/fa';
-import AboutShoe from '../../pages/aboutShoe';
+import AboutShoe from '../../pages/user/pages/aboutShoe';
 import { useNavigate } from 'react-router-dom';
 
 
