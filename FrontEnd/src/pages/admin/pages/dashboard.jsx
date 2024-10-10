@@ -8,7 +8,7 @@ import { FiPlusCircle } from "react-icons/fi";
 function dashboard() {
   return (
     <Layout>
-      <div className="py-[20px] px-[80px] bg-gray-100">
+      <div className="py-[20px] px-[80px] bg-gray-100 w-screen">
         <div className="flex justify-between">
           <h1 className="text-[18px] font-semibold text-black font-poppins">Dashboard</h1>
           <button className="bg-black hover:bg-black-600 text-white text-hite py-1 px-6 justify-center text-[16px]  font-Poppins  font-semibold">

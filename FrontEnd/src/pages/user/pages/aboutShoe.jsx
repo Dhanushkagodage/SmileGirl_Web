@@ -37,11 +37,11 @@ function aboutShoe() {
   };
   return (
     <div className=" absolute  justify-center items-center align-middle">
-      <div className=" inline-flex items-center justify-between w-full bg-white h-14 lg:px-26 xl:px-26 sm:px-12 md:px-20 px-12">
+      <div className="fixed inline-flex items-center justify-between w-full bg-white h-14 lg:px-26 xl:px-26 sm:px-12 md:px-20 px-12">
         <div className="inline-flex">
-          <h1 className="text-xl font-extrabold text-custom-pink sm:text-2xl md:text-3xl lg:text-4xl">
+          <h1 className=" font-extrabold text-custom-pink text-[18px] sm:text-[20px] md:text-[26px] lg:text-[32px] font-poppins">
             Smile{" "}
-            <span className="text-xl font-extrabold text-black sm:text-2xl md:text-3xl lg:text-4xl font-ReggaeOne">
+            <span className=" font-extrabold text-black text-[18px] sm:text-[20px] md:text-[26px] lg:text-[32px]  font-ReggaeOne">
               G
             </span>
             irl
@@ -50,7 +50,7 @@ function aboutShoe() {
 
         {/* Second nav (icons) - always visible */}
         <nav className="items-end">
-          <ul className="inline-flex space-x-5 text-sm font-extrabold sm:text-base md:text-lg lg:text-xl">
+          <ul className="inline-flex space-x-5 font-extrabold xl:text-[16px] lg:text-[16px] md:text-[14px] sm:text-[12px] text-[12px] items-center">
             <li>
               <Link to="/" className="">
                 <i className="fas fa-search"></i>
@@ -78,7 +78,7 @@ function aboutShoe() {
           </ul>
         </nav>
       </div>
-      <div className="px-14 py-2">
+      <div className="px-14 py-16">
         <div className="flex text-gray-500 font-poppins font-light items-center ">
           <button
             className="bg-white rounded-full hover:bg-black-600 border-2 flex justify-center items-center w-8 h-8 mr-2"
