@@ -25,7 +25,7 @@ function addProduct() {
             Add Product
           </h1>
         </div>
-        <div className="grid bg-white rounded-xl grid-flow-col py-[20px] px-[40px] gap-10">
+        <div className="grid bg-white rounded-xl lg:grid-flow-col py-[20px] px-[40px] gap-10 md:grid-flow-row">
           <div className="">
             <div className="mb-6">
               <label className="block mb-2 text-sm font-medium text-black  font-poppins">
@@ -218,7 +218,7 @@ function addProduct() {
               </div>
             </div>
             <div className="grid grid-cols-2 mt-5 gap-4">
-              <div className="h-[150px] bg-gray-50 border-black rounded-md outline-dotted outline-1 w-[250px] flex items-center justify-center">
+              <div className="h-[150px] bg-gray-50 rounded-md outline-dotted outline-gray-500 outline-1 w-[250px] flex items-center justify-center">
                 <div className="grid grid-rows-3 text-center items-center justify-center">
                   <div className="flex items-center justify-center mb-1">
                     <CiImageOn className="text-sky-500 text-[30px] text-center " />

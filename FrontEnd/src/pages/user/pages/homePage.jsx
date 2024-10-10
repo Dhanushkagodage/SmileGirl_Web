@@ -8,46 +8,47 @@ function HomePage() {
   return (
     <Layout>
       {/* Page-specific content */}
-      <div className="xl:h-[550px] md:h-[400px] sm:h-[300px] bg-gradient-to-r from-white to-pink-400 relative overflow-hidden w-full">
-        <div className="grid grid-cols-2 justify-between lg:px-26 xl:px-26 md:px-20 sm:px-12 xs:px-12 px-12">
+      <div className="xl:h-[550px] md:h-[400px] sm:h-[350px] bg-gradient-to-r from-white to-pink-400 relative  w-full">
+        <div className="grid grid-flow-col justify-between lg:px-26 xl:px-26 md:px-20 sm:px-12 xs:px-12 px-12 xl:h-[550px] md:h-[400px] sm:h-[350px]">
           {/* Text content */}
-          <div className="text-left lg:py-28 xl:py-28 sm:py-12 py-6">
-            <h1 className="font-bold text-black sm:text-[25px] md:text-[30px] lg:text-[48px] font-Poppins">
+          <div className="text-left lg:py-28 xl:py-28 md:py-20 sm:py-16 py-6 xl:h-[550px] md:h-[400px] sm:h-[350px]">
+            <h1 className="font-bold text-black sm:text-[25px] md:text-[30px] lg:text-[40px] xl:text-[48px] text-[20px] font-Poppins">
               Step Confidently In Style.
             </h1>
-            <p className="text-[11px] sm:text-[12px] md:text-[15px] lg:text-[20px] font-Poppins font-light opacity-60 pt-3">
-              All footwear collection designed for the modern woman by Smile Girl
+            <p className="text-[11px] sm:text-[12px] md:text-[15px] lg:text-[20px] font-Poppins font-light text-gray-500  xl:pt-3 lg:pt-3 md:pt-2 sm:pt-1 pt-1">
+              All footwear collection designed for the modern woman by Smile
+              Girl
             </p>
-            <div className="text-left pt-5">
-              <button className="bg-black hover:bg-black-600 text-white py-2 px-6 justify-center text-[11px] sm:text-[12px] md:text-[15px] lg:text-[20px] font-Poppins xl:py-2 xl:px-10 ">
+            <div className="text-left xl:py-10  lg:py-10  md:py-6  sm:py-4  py-3 ">
+              <button className="bg-black hover:bg-black-600 text-white  justify-center text-[11px] sm:text-[12px] md:text-[15px] lg:text-[20px] font-Poppins xl:py-2 xl:px-10 lg:py-2 lg:px-10 md:py-1 md:px-6 sm:py-1 sm:px-4  py-1 px-4">
                 Shop Now!
               </button>
             </div>
           </div>
 
           {/* Responsive image */}
-          <div className="object-cover w-full xl:px-10">
+          <div className="object-cover w-full xl:px-10 xl:h-[550px] md:h-[400px] sm:h-[350px]">
             <img
               src={homepageBg}
               alt="homepage background"
               loading="lazy"
-              className="max-w-full xl:h-[550px] md:h-[300px] sm:h-[300px] object-cover"
+              className="xl:h-[550px] md:h-[400px] sm:h-[350px] h-[178px] xl:w-full lg:w-full md:w-full sm:w-full w-[116px] object-fit"
             />
           </div>
         </div>
       </div>
 
       {/* New Arrivals Section */}
-      <div className="w-full mt-5 grid">
-        <div className="text-center grid">
-          <h1 className="font-normal text-black sm:text-[25px] md:text-[30px] lg:text-[48px] font-Poppins">
+      <div className="w-full  grid xl:mt-[60px] lg:mt-[60px] md:mt-[50px] sm:mt-[40px] mt-[20px]">
+        <div className="text-center grid ">
+          <h1 className="font-normal text-black text-[20px] sm:text-[25px] md:text-[30px] lg:text-[40px] xl:text-[48px] font-Poppins">
             New Arrivals
           </h1>
-          <h1 className="text-[11px] sm:text-[12px] md:text-[15px] lg:text-[20px] font-Poppins font-light opacity-60">
+          <h1 className="text-[11px] sm:text-[12px] md:text-[14px] lg:text-[18px] xl:text-[20px] font-Poppins font-light text-gray-500">
             Say hello to our newest collection
           </h1>
         </div>
-        <div className="text-center w-full grid grid-cols-4 mt-5">
+        <div className="w-full grid grid-cols-4 xl:mt-[60px] lg:mt-[60px] md:mt-[50px] sm:mt-[40px] mt-[20px]">
           <Shoecard />
           <Shoecard />
           <Shoecard />
@@ -55,16 +56,16 @@ function HomePage() {
         </div>
       </div>
 
-      <div className="w-full mt-5 grid">
+      <div className="w-full grid xl:mt-[60px] lg:mt-[60px] md:mt-[50px] sm:mt-[40px] mt-[20px]">
         <div className="text-center grid">
-          <h1 className="font-normal text-black sm:text-[25px] md:text-[30px] lg:text-[48px] font-Poppins">
-          This Month’s Best Sellers
+          <h1 className="font-normal text-blacktext-[20px] sm:text-[25px] md:text-[30px] lg:text-[40px] xl:text-[48px] font-Poppins">
+            This Month’s Best Sellers
           </h1>
-          <h1 className="text-[11px] sm:text-[12px] md:text-[15px] lg:text-[20px] font-Poppins font-light opacity-60">
-          Discover the hottest picks of the month!
+          <h1 className="text-[11px] sm:text-[12px] md:text-[14px] lg:text-[18px] xl:text-[20px] font-Poppins font-light text-gray-500">
+            Discover the hottest picks of the month!
           </h1>
         </div>
-        <div className="text-center w-full grid grid-cols-4 mt-5">
+        <div className="w-full grid grid-cols-4 xl:mt-[60px] lg:mt-[60px] md:mt-[50px] sm:mt-[40px] mt-[20px] ">
           <Shoecard />
           <Shoecard />
           <Shoecard />
