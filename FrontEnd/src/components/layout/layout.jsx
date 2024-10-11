@@ -14,7 +14,7 @@ function layout({ children }) {
       <NavBar />
 
       {/* Content */}
-      <div>{children}</div>
+      <div className="pt-14">{children}</div>
 
       {/* Footer */}
       <Footer />

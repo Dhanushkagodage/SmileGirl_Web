@@ -1,5 +1,4 @@
 /* eslint-disable no-unused-vars */
-// components/Graph.jsx
 import React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
@@ -18,21 +17,21 @@ const data = [
   { month: 'Dec', orders: 520 },
 ];
 
-function GraphChart () {
+function GraphChart() {
   return (
     <div className="w-full h-full">
       <ResponsiveContainer width="100%" height="80%">
-        <LineChart data={data} margin={{  right: 30, left: 20, bottom: 5 }}>
+        <LineChart data={data} margin={{ right: 30, left: 20, bottom: 5 }}>
           <CartesianGrid strokeDasharray="4 4" />
           <XAxis dataKey="month" />
-          <YAxis dataKey="orders"/>
+          <YAxis dataKey="orders" />
           <Tooltip />
           <Legend />
-          <Line type="monotone" dataKey="orders" stroke="#FF018D" strokeWidth={2} activeDot={{ r: 8 }}   />
+          <Line type="monotone" dataKey="orders" stroke="#FF018D" strokeWidth={2} activeDot={{ r: 8 }} />
         </LineChart>
       </ResponsiveContainer>
     </div>
   );
-};
+}
 
 export default GraphChart;

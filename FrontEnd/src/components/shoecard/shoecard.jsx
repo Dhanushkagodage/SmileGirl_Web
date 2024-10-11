@@ -11,7 +11,7 @@ function Shoecard() {
   const navigate = useNavigate();
 
   return (
-    <div className="w-full p-8" onClick={() => navigate('/aboutShoe')}>
+    <div className="w-full xl:p-[32px]] lg:p-[32px] md:p-[24px] sm:p-[16px] p-[8px]" onClick={() => navigate('/aboutShoe')}>
       <div className="grid h-fit shadow-[0_0_10px_0_rgba(0,0,0,0.2)] relative">
         {/* image row */}
         <div className="relative h-fit">
