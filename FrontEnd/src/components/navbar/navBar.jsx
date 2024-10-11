@@ -55,11 +55,11 @@ function NavBar() {
   };
 
   return (
-    <div className="relative inline-flex items-center justify-between w-full bg-white h-14 lg:px-26 xl:px-26 sm:px-12 md:px-20 px-12">
+    <div className="fixed inline-flex items-center justify-between w-full bg-white h-14 lg:px-26 xl:px-26 sm:px-12 md:px-20 px-12 z-50">
       <div className="inline-flex">
-        <h1 className="text-xl font-extrabold text-custom-pink sm:text-2xl md:text-3xl lg:text-4xl">
+        <h1 className=" font-extrabold text-custom-pink text-[18px] sm:text-[20px] md:text-[26px] lg:text-[32px] font-poppins">
           Smile{" "}
-          <span className="text-xl font-extrabold text-black sm:text-2xl md:text-3xl lg:text-4xl font-ReggaeOne">
+          <span className=" font-extrabold text-black text-[18px] sm:text-[20px] md:text-[28px] lg:text-[34px] font-ReggaeOne">
             G
           </span>
           irl
@@ -67,14 +67,14 @@ function NavBar() {
       </div>
 
       {/* First nav - visible on lg screens */}
-      <nav className="hidden lg:flex">
-        <ul className="inline-flex space-x-10 font-medium">
+      <nav className="hidden lg:flex text-[16px]">
+        <ul className="inline-flex space-x-10 font-medium ">
           {!isAdmin ? (
             <>
               <NavLink
                 to="/"
                 className={({ isActive }) =>
-                  `text-lg ${isActive ? "underline underline-offset-4 " : ""}`
+                  ` ${isActive ? "underline underline-offset-4 " : ""}`
                 }
               >
                 Home
@@ -82,7 +82,7 @@ function NavBar() {
               <NavLink
                 to="/shop"
                 className={({ isActive }) =>
-                  `text-lg ${isActive ? "underline underline-offset-4 " : ""}`
+                  ` ${isActive ? "underline underline-offset-4 " : ""}`
                 }
               >
                 Shop
@@ -90,7 +90,7 @@ function NavBar() {
               <NavLink
                 to="/customize"
                 className={({ isActive }) =>
-                  `text-lg ${isActive ? "underline underline-offset-4 " : ""}`
+                  ` ${isActive ? "underline underline-offset-4 " : ""}`
                 }
               >
                 Customize
@@ -98,7 +98,7 @@ function NavBar() {
               <NavLink
                 to="/about"
                 className={({ isActive }) =>
-                  `text-lg ${isActive ? "underline underline-offset-4 " : ""}`
+                  ` ${isActive ? "underline underline-offset-4 " : ""}`
                 }
               >
                 About
@@ -106,7 +106,7 @@ function NavBar() {
               <NavLink
                 to="/contact"
                 className={({ isActive }) =>
-                  `text-lg ${isActive ? "underline underline-offset-4 " : ""}`
+                  ` ${isActive ? "underline underline-offset-4 " : ""}`
                 }
               >
                 Contact
@@ -117,7 +117,7 @@ function NavBar() {
               <NavLink
                 to="/dashboard"
                 className={({ isActive }) =>
-                  `text-lg ${isActive ? "underline underline-offset-4 " : ""}`
+                  ` ${isActive ? "underline underline-offset-4 " : ""}`
                 }
               >
                 Dashboard
@@ -125,7 +125,7 @@ function NavBar() {
               <NavLink
                 to="/allproducts"
                 className={({ isActive }) =>
-                  `text-lg ${isActive ? "underline underline-offset-4 " : ""}`
+                  `${isActive ? "underline underline-offset-4 " : ""}`
                 }
               >
                 All Products
@@ -133,7 +133,7 @@ function NavBar() {
               <NavLink
                 to="/orderslist"
                 className={({ isActive }) =>
-                  `text-lg ${isActive ? "underline underline-offset-4 " : ""}`
+                  `${isActive ? "underline underline-offset-4 " : ""}`
                 }
               >
                 Orders List
@@ -141,7 +141,7 @@ function NavBar() {
               <NavLink
                 to="/addproduct"
                 className={({ isActive }) =>
-                  `text-lg ${isActive ? "underline underline-offset-4 " : ""}`
+                  `${isActive ? "underline underline-offset-4 " : ""}`
                 }
               >
                 Add Product
@@ -153,7 +153,7 @@ function NavBar() {
 
       {/* Second nav (icons) - always visible */}
       <nav className="items-end">
-        <ul className="inline-flex space-x-5 text-sm font-extrabold sm:text-base md:text-lg lg:text-xl">
+        <ul className="inline-flex space-x-5  font-extrabold xl:text-[16px] lg:text-[16px] md:text-[14px] sm:text-[12px] text-[12px] items-center">
           <li>
             <Link to="/" className="">
               <i className="fas fa-search"></i>
@@ -192,14 +192,14 @@ function NavBar() {
       </nav>
 
       {/* Menu button for small screens */}
-      <button className="block lg:hidden z-50" onClick={toggleMenu}>
+      <button className="block lg:hidden z-50 ml-4" onClick={toggleMenu}>
         <i className="fas fa-bars"></i>
       </button>
 
       {/* Mobile menu - visible only on small and medium screens */}
       {isMenuOpen && (
         <nav className="absolute left-0 w-full bg-white top-14 lg:hidden z-40">
-          <ul className="flex flex-col items-center space-y-5 text-base font-medium sm:text-lg md:text-xl">
+          <ul className="flex flex-col items-center font-medium text-[14px] space-y-2">
             {!isAdmin ? (
               <>
                 <li>
