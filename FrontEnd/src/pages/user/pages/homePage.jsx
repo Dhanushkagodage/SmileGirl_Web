@@ -39,7 +39,7 @@ function HomePage() {
       </div>
 
       {/* New Arrivals Section */}
-      <div className="w-full  grid xl:mt-[60px] lg:mt-[60px] md:mt-[50px] sm:mt-[40px] mt-[20px]">
+      <div className="w-full  grid xl:mt-[60px] lg:mt-[60px] md:mt-[50px] sm:mt-[40px] mt-[20px] lg:px-26 xl:px-26 sm:px-8 md:px-20 px-8">
         <div className="text-center grid ">
           <h1 className="font-normal text-black text-[20px] sm:text-[25px] md:text-[30px] lg:text-[40px] xl:text-[48px] font-Poppins">
             New Arrivals
@@ -48,15 +48,18 @@ function HomePage() {
             Say hello to our newest collection
           </h1>
         </div>
-        <div className="w-full grid grid-cols-4 xl:mt-[60px] lg:mt-[60px] md:mt-[50px] sm:mt-[40px] mt-[20px]">
+        <div className="w-full grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 xl:mt-[60px] lg:mt-[60px] md:mt-[50px] sm:mt-[40px] mt-[20px] lg:gap-10 xl:gap-10 sm:gap-4 md:gap-6 gap-4">
           <Shoecard />
           <Shoecard />
           <Shoecard />
-          <Shoecard />
+          {/* Display a 4th card only on md and larger screens */}
+          <div className="hidden md:block">
+            <Shoecard />
+          </div>
         </div>
       </div>
 
-      <div className="w-full grid xl:mt-[60px] lg:mt-[60px] md:mt-[50px] sm:mt-[40px] mt-[20px]">
+      <div className="w-full grid xl:mt-[60px] lg:mt-[60px] md:mt-[50px] sm:mt-[40px] mt-[20px] lg:px-26 xl:px-26 sm:px-8 md:px-20 px-8">
         <div className="text-center grid">
           <h1 className="font-normal text-blacktext-[20px] sm:text-[25px] md:text-[30px] lg:text-[40px] xl:text-[48px] font-Poppins">
             This Month’s Best Sellers
@@ -65,11 +68,14 @@ function HomePage() {
             Discover the hottest picks of the month!
           </h1>
         </div>
-        <div className="w-full grid grid-cols-4 xl:mt-[60px] lg:mt-[60px] md:mt-[50px] sm:mt-[40px] mt-[20px] ">
+        <div className="w-full grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 xl:mt-[60px] lg:mt-[60px] md:mt-[50px] sm:mt-[40px] mt-[20px] lg:gap-10 xl:gap-10 sm:gap-4 md:gap-6 gap-4 ">
           <Shoecard />
           <Shoecard />
           <Shoecard />
-          <Shoecard />
+          {/* Display a 4th card only on md and larger screens */}
+          <div className="hidden md:block">
+            <Shoecard />
+          </div>
         </div>
       </div>
     </Layout>
