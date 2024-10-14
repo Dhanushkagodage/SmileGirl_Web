@@ -55,7 +55,7 @@ function NavBar() {
   };
 
   return (
-    <div className="fixed inline-flex items-center justify-between w-full bg-white h-14 lg:px-26 xl:px-26 sm:px-12 md:px-20 px-12 z-50">
+    <div className="fixed inline-flex items-center justify-between w-full bg-white h-14 lg:px-26 xl:px-26 sm:px-8 md:px-20 px-8 z-50">
       <div className="inline-flex">
         <h1 className=" font-extrabold text-custom-pink text-[18px] sm:text-[20px] md:text-[26px] lg:text-[32px] font-poppins">
           Smile{" "}
@@ -183,7 +183,7 @@ function NavBar() {
           <li>
             <button
               onClick={toggleUserMode}
-              className="text-white bg-black py-1 px-5 text-[16px]"
+              className="text-white bg-black py-1 text-[10px] px-3 xl:px-5 lg:px-5 md:px-4 sm:px-3 "
             >
               {isAdmin ? "ADMIN" : "USER"}
             </button>

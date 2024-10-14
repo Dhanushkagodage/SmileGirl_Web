@@ -5,7 +5,8 @@ import Layout from "../../../components/layout/layout";
 function contactPage() {
   return (
     <Layout>
-      <div className="grid grid-cols-1 items-center justify-center text-center pt-10 pb-10 sm:px-10 md:px-10 px-10">
+      <div className="xl:mt-5 lg:mt-5 md:mt-3 sm:mt-2 mt-2 lg:px-26 xl:px-26 sm:px-8 md:px-20 px-8 ">
+      <div className="grid grid-cols-1 items-center justify-center text-center ">
         <div>
           <h1 className="text-xl font-extrabold text-blackk sm:text-2xl md:text-3xl lg:text-4xl font-poppins">
             Just say hello… <br />
@@ -18,62 +19,62 @@ function contactPage() {
           </h1>
         </div>
       </div>
-      <div className="grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 items-start justify-center   xl:px-52 lg:px-52 md:px-30 sm:px-20 px-10 mb-10 mt-7  sm:grid-cols-1">
+      <div className="grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 items-start justify-center   xl:px-30 lg:px-30 md:px-20 sm:px-20 px-10  mt-7  sm:grid-cols-1 text-[12px] sm:text-[12px] md:text-[12px] lg:text-[14px] xl:text-[14px]">
         <div className="grid grid-cols-1">
           <div className="mb-8">
-            <label className="block mb-2 text-sm font-medium text-black  font-poppins">
+            <label className="block mb-2 font-medium text-black  font-poppins">
               Address :
             </label>
-            <h1 className="block mb-2 text-sm font-light text-gray-500  font-poppins">
+            <h1 className="block mb-2 font-light text-gray-500  font-poppins">
               #146/2, Kandy Road, Ihala Biyanwila, Kadawatha.
             </h1>
           </div>
           <div className="mb-8">
-            <label className="block mb-2 text-sm font-medium text-black  font-poppins">
+            <label className="block mb-2  font-medium text-black  font-poppins">
               Email :
             </label>
-            <h1 className="block mb-2 text-sm font-light text-gray-500  font-poppins">
-              1qQp6@example.com
+            <h1 className="block mb-2  font-light text-gray-500  font-poppins">
+              smilegril@gmail.com
             </h1>
           </div>
           <div className="mb-8">
-            <label className="block mb-2 text-sm font-medium text-black  font-poppins">
+            <label className="block mb-2  font-medium text-black  font-poppins">
               Phone Number :
             </label>
-            <h1 className="block mb-2 text-sm font-light text-gray-500  font-poppins">
+            <h1 className="block mb-2  font-light text-gray-500  font-poppins">
               077 123 4567
             </h1>
           </div>
           <div className="mb-8">
-            <label className="block mb-2 text-sm font-medium text-black  font-poppins">
+            <label className="block mb-2  font-medium text-black  font-poppins">
               Facebook :
             </label>
-            <h1 className="block mb-2 text-sm font-light text-gray-500  font-poppins">
+            <h1 className="block mb-2 font-light text-gray-500  font-poppins">
               @smilegirl
             </h1>
           </div>
         </div>
         <div className="grid grid-cols-1">
           <div className="mb-6">
-            <label className="block mb-2 text-sm font-medium text-black  font-poppins">
+            <label className="block mb-2  font-medium text-black  font-poppins">
               Your Name:
             </label>
             <input
               type="text"
               id="name"
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+              className="bg-gray-50 border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full xl:p-2 lg:p-2 md:p-2 sm:p-1.5 p-1.5  "
               placeholder="Enter your Name"
               required
             />
           </div>
           <div className="mb-6">
-            <label className="block mb-2 text-sm font-medium text-black  font-poppins">
+            <label className="block mb-2  font-medium text-black  font-poppins">
               Your Email :
             </label>
             <input
               type="text"
               id="email"
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+              className="bg-gray-50 border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full xl:p-2 lg:p-2 md:p-2 sm:p-1.5 p-1.5  "
               placeholder="Enter your Email"
               required
             />
@@ -85,43 +86,44 @@ function contactPage() {
             <input
               type="text"
               id="phone"
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+              className="bg-gray-50 border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full xl:p-2 lg:p-2 md:p-2 sm:p-1.5 p-1.5  "
               placeholder="Enter your Phone Number"
               required
             />
           </div>
           <div className="mb-6">
-            <label className="block mb-2 text-sm font-medium text-black  font-poppins">
+            <label className="block mb-2  font-medium text-black  font-poppins">
               Subject :
             </label>
             <input
               type="text"
               id="subject"
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+              className="bg-gray-50 border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full xl:p-2 lg:p-2 md:p-2 sm:p-1.5 p-1.5 "
               placeholder="Enter your Subject"
               required
             />
           </div>
           <div className="mb-6">
-            <label className="block mb-2 text-sm font-medium text-black  font-poppins">
+            <label className="block mb-2  font-medium text-black  font-poppins">
               Message :
             </label>
             <textarea
               id="message"
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+              className="bg-gray-50 border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  "
               placeholder="Enter your Message"
               required
             ></textarea>
           </div>
-          <div className="mb-6 flex justify-end">
-            <button className="bg-gray-500 hover:bg-gray-700 text-white text-sm rounded-lg font-poppins block px-10 py-2 mr-2">
+          <div className=" flex justify-end">
+            <button className="bg-gray-500 hover:bg-gray-700 text-white  rounded-lg font-poppins block px-6 py-2 mr-2 xl:px-10 lg:px-10 md:px-8 sm:px-6 ">
               Cancel
             </button>
-            <button className="bg-black hover:bg-gray-700 text-white text-sm rounded-lg font-poppins block px-10 py-2 ">
+            <button className="bg-black hover:bg-gray-700 text-white  rounded-lg font-poppins block px-6 py-2 mr-2 xl:px-10 lg:px-10 md:px-8 sm:px-6 ">
               Submit
             </button>
           </div>
         </div>
+      </div>
       </div>
     </Layout>
   );

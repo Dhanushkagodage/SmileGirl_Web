@@ -15,14 +15,14 @@ function FavouriteDrawer({ isOpen, toggleFavDrawer }) {
       ></div>
 
       {/* Drawer */}
-      <div className="absolute top-0 right-0 sm:w-[200px] md:w-[250px] lg:w-[350px] h-full bg-white shadow-lg">
+      <div className="absolute top-0 right-0 w-[250px] sm:w-[250px] md:w-[300px] lg:w-[350px] h-full bg-white shadow-lg">
         <div className="flex  p-4 h-14 border-b-2 border-gray-300 items-center">
           <div className="flex ml-auto items-center">
-            <h2 className="text-xl font-bold">WISH LIST</h2>
-            <i className="fas fa-heart ml-2"></i>
+            <h2 className="text-[11px] sm:text-[12px] md:text-[15px] lg:text-[16px] font-bold">WISH LIST</h2>
+            <i className="fas fa-heart xl:ml-2 lg:ml-2 ml-1 text-[11px] sm:text-[12px] md:text-[15px] lg:text-[16px]"></i>
           </div>
-          <div className="ml-auto">
-            <button onClick={toggleFavDrawer} className="text-2xl">
+          <div className="ml-auto text-[16px] sm:text-[16px] md:text-[20px] lg:text-[28px]">
+            <button onClick={toggleFavDrawer} className="">
               &times; {/* Close button */}
             </button>
           </div>
