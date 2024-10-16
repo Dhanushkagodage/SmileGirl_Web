@@ -21,7 +21,7 @@ function addProduct() {
       <div className="py-[20px] px-[80px]  bg-gray-100">
         <div>
           {" "}
-          <h1 className="text-[18px] font-semibold text-black font-poppins">
+          <h1 className="text-[11px] sm:text-[12px] md:text-[15px] lg:text-[16px] font-semibold text-black font-poppins">
             Add Product
           </h1>
         </div>

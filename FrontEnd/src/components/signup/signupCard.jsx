@@ -7,15 +7,15 @@ function SignupCard({ isOpen, toggleSignupCard }) {
 
   return (
     <div
-      className="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50"
+      className="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50 lg:px-26 xl:px-26 sm:px-8 md:px-20 px-8"
       onClick={toggleSignupCard}
     >
       <div
-        className="bg-white px-20 py-8 pb-8 rounded-lg shadow-lg   relative w-[40%] h-[60%]"
+        className="bg-white lg:px-14 xl:px-14 sm:px-8 md:px-6 px-6 py-8 rounded-lg shadow-lg relative xl:w-[40%] lg:w-[40%] md:w-[80%] sm:w-[80%] w-[80%] h-auto"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex justify-center">
-          <h2 className="text-2xl font-semibold mb-4 text-center font-poppins">
+          <h2 className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px font-semibold mb-4 text-center font-poppins">
             Sign up
           </h2>
           <i
@@ -23,11 +23,11 @@ function SignupCard({ isOpen, toggleSignupCard }) {
             onClick={toggleSignupCard}
           ></i>
         </div>
-        <form>
+        <form className="text-[12px] sm:text-[12px] md:text-[12px] lg:text-[14px] xl:text-[14px]">
           <div className="mb-4">
             <label
               htmlFor="email"
-              className="block text-sm font-medium text-gray-700 mb-1 font-poppins"
+              className="block font-medium text-gray-700 mb-1 font-poppins"
             >
               Email
             </label>
@@ -35,14 +35,14 @@ function SignupCard({ isOpen, toggleSignupCard }) {
               type="email"
               id="email"
               placeholder="Enter your email"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 font-poppins"
+              className="w-full block xl:p-2 lg:p-2 md:p-2 sm:p-1.5 p-1.5 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 font-poppins"
               required
             />
           </div>
           <div className="mb-6">
             <label
               htmlFor="password"
-              className="block text-sm font-medium text-gray-700 mb-1 font-poppins"
+              className="block  font-medium text-gray-700 mb-1 font-poppins"
             >
               Password
             </label>
@@ -50,18 +50,18 @@ function SignupCard({ isOpen, toggleSignupCard }) {
               type="password"
               id="password"
               placeholder="Enter your password"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 font-poppins"
+              className="w-full block xl:p-2 lg:p-2 md:p-2 sm:p-1.5 p-1.5 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 font-poppins"
               required
             />
           </div>
           <button
             type="submit"
-            className="w-full bg-custom-pink text-white py-2 rounded-md hover:bg-pink-500 transition duration-200 font-poppins"
+            className="xl:p-1.5 lg:p-1.5 md:p-1 sm:p-1 p-1.5 text-[12px] sm:text-[14px] md:text-[16px] lg:text-[16px] font-medium w-full bg-custom-pink text-white py-2 rounded-md hover:bg-pink-500 transition duration-200 font-poppins"
           >
-            Sign Up
+            SIGN UP
           </button>
         </form>
-        <p className="text-center mt-4 font-poppins">
+        <p className="text-[12px] sm:text-[12px] md:text-[12px] lg:text-[14px] xl:text-[14px] text-center mt-4 font-poppins">
           Already have an account? <br />
           <span className="text-custom-pink cursor-pointer font-poppins font-medium">
             Login
