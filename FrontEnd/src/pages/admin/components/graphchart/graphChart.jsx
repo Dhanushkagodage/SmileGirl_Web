@@ -19,7 +19,7 @@ const data = [
 
 function GraphChart() {
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full text-[11px] sm:text-[12px] md:text-[15px] lg:text-[16px]">
       <ResponsiveContainer width="100%" height="80%">
         <LineChart data={data} margin={{ right: 30, left: 20, bottom: 5 }}>
           <CartesianGrid strokeDasharray="4 4" />

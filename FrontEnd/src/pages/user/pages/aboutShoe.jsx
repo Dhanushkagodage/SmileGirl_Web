@@ -3,11 +3,10 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
-import Layout from "../../../components/layout/layout";
 import Image from "../../../assets/1.jpg";
 import { FaEnvelope, FaWhatsapp } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
-import Footer from "../../../components/footer/Footer";
+import Footer from "../../../components/footer/footer";
 import FavouriteDrawer from "../components/favouritedrawer/favouriteDrawer";
 import ShopcartDrawer from "../components/shopcartdrawer/shopcartDrawer";
 import LoginCard from "../../../components/login/loginCard";
@@ -36,7 +35,10 @@ function aboutShoe() {
     setIsLoginCardOpen(!isLoginCardOpen);
   };
   return (
-    <div className=" absolute  justify-center items-center align-middle">
+    <div
+      className=" justify-center items-center align-middle w-screen
+    "
+    >
       <div className="fixed inline-flex items-center justify-between w-full bg-white h-14 lg:px-26 xl:px-26 sm:px-12 md:px-20 px-12">
         <div className="inline-flex">
           <h1 className=" font-extrabold text-custom-pink text-[18px] sm:text-[20px] md:text-[26px] lg:text-[32px] font-poppins">
@@ -78,28 +80,30 @@ function aboutShoe() {
           </ul>
         </nav>
       </div>
-      <div className="px-14 py-16">
-        <div className="flex text-gray-500 font-poppins font-light items-center ">
+      <div className="  lg:px-26 xl:px-26 sm:px-8 md:px-20 px-8 ">
+        <div className="flex text-gray-500 font-poppins font-light items-center pt-16 xl:pb-3 lg:pb-3 md:pb-2 sm:pb-2 pb-2  ">
           <button
-            className="bg-white rounded-full hover:bg-black-600 border-2 flex justify-center items-center w-8 h-8 mr-2"
+            className="bg-white rounded-full hover:bg-black-600 border-2 flex justify-center items-center xl:w-8 xl:h-8 lg:w-8 lg:h-8 md:w-6 md:h-6 sm:w-5 sm:h-5 w-5 h-5  mr-1"
             onClick={() => navigate(-1)}
           >
-            <i className="fa-solid fa-arrow-left"></i>
+            <i className="fa-solid fa-arrow-left text-[11px] sm:text-[12px] md:text-[15px] lg:text-[16px]"></i>
           </button>
-          <h1>Shop/About Footwear/ Basic Braided Sliders</h1>
+          <h1 className="text-[11px] sm:text-[12px] md:text-[15px] lg:text-[16px]">
+            Shop/About Footwear/ Basic Braided Sliders
+          </h1>
         </div>
-        <div className="bg-gray-50 mt-2 grid mb-5 py-10 rounded-lg">
-          <div className=" grid grid-flow-col gap-2 h-[500px]  justify-start ml-40">
+        <div className="bg-gray-50  rounded-lg lg:p-10 xl:p-10 sm:p-8 md:p-8 p-8 w-full">
+          <div className=" grid xl:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 md:grid-cols-1 gap-6 justify-center ">
             {/* images section */}
-            <div className="grid grid-flow-col justify-start">
+            <div className="grid xl:grid-flow-col lg:grid-flow-col sm:grid-flow-row md:grid-flow-col grid-flow-row justify-self-start gap-[10px] justify-center">
               {/* 3 images */}
-              <div className="grid grid-flow-row gap-[10px] justify-end mr-[40px]">
+              <div className="grid xl:grid-flow-row lg:grid-flow-row sm:grid-flow-col md:grid-flow-row grid-flow-col  h-fit gap-[10px]">
                 <div className="">
                   <img
                     src={Image}
                     alt="shoe"
                     loading="lazy"
-                    className="object-cover h-[150px]"
+                    className="object-contain h-[80px] sm:h-[100px] md:h-[120px] lg:h-[140px] xl:h-[140px] w-full"
                   />
                 </div>
                 <div className="">
@@ -107,7 +111,7 @@ function aboutShoe() {
                     src={Image}
                     alt="shoe"
                     loading="lazy"
-                    className="object-cover h-[150px]"
+                    className="object-contain h-[80px] sm:h-[100px] md:h-[120px] lg:h-[140px] xl:h-[140px]"
                   />
                 </div>
                 <div className="">
@@ -115,39 +119,36 @@ function aboutShoe() {
                     src={Image}
                     alt="shoe"
                     loading="lazy"
-                    className="object-cover h-[150px]"
+                    className="object-contain h-[80px] sm:h-[100px] md:h-[120px] lg:h-[140px] xl:h-[140px]"
                   />
                 </div>
               </div>
-              {/* 1 image */}
+              {/* 1 large image */}
               <div className="">
                 <img
                   src={Image}
                   alt="shoe"
                   loading="lazy"
-                  className="object-cover h-[490px] "
+                  className="object-contain h-[260px] sm:h-[320px] md:h-[380px] lg:h-[440px] xl:h-[440px] w-full"
                 />
               </div>
             </div>
-
             {/* description section */}
-            <div className="justify-self-start font-poppins ml-[40px]">
+            <div className="justify-self-start text-[11px] sm:text-[12px] md:text-[15px] lg:text-[16px] font-poppins">
               {/* name */}
-              <h1 className="text-[20px] font-medium text-black">
+              <h1 className=" font-medium text-black mb-1">
                 Basic Braided Sliders
               </h1>
 
               {/* price */}
-              <h1 className="text-[20px] font-medium text-black">
-                Rs.6,800.00
-              </h1>
+              <h1 className=" font-normal text-black mb-1">Rs.6,800.00</h1>
 
               {/* rating */}
               <div className="flex  items-center mb-4">
                 {[...Array(5)].map((_, index) => (
                   <span
                     key={index}
-                    className={`text-custom-pink text-[25px] ${
+                    className={`text-custom-pink text-[16px] sm:text-[16px] md:text-[18px] lg:text-[20px]  ${
                       index < rating ? "fill" : ""
                     }`}
                   >
@@ -157,71 +158,70 @@ function aboutShoe() {
               </div>
               {/* colors */}
               <div className="mb-4 grid ">
-                <h1 className="text-[20px] font-medium text-black mb-2">
-                  Colors :
-                </h1>
+                <h1 className="font-medium text-black mb-2">Colors :</h1>
                 <div className="flex gap-2">
-                  <button className="w-[30px] h-[30px]  bg-black rounded"></button>
-                  <button className="w-[30px] h-[30px]  bg-white rounded border-[1px] border-black"></button>
-                  <button className="w-[30px] h-[30px]  bg-red-500 rounded"></button>
-                  <button className="w-[30px] h-[30px]  bg-yellow-200 rounded"></button>
+                  <button className="xl:w-[30px] lg:w-[30px] md:w-[25px] sm:w-[20px] w-[20px] xl:h-[30px] lg:h-[30px] md:h-[25px] sm:h-[20px] h-[20px]  bg-black rounded"></button>
+                  <button className="xl:w-[30px] lg:w-[30px] md:w-[25px] sm:w-[20px] w-[20px] xl:h-[30px] lg:h-[30px] md:h-[25px] sm:h-[20px] h-[20px]  bg-white rounded border-[1px] border-black"></button>
+                  <button className="xl:w-[30px] lg:w-[30px] md:w-[25px] sm:w-[20px] w-[20px] xl:h-[30px] lg:h-[30px] md:h-[25px] sm:h-[20px] h-[20px] bg-red-500 rounded"></button>
+                  <button className="xl:w-[30px] lg:w-[30px] md:w-[25px] sm:w-[20px] w-[20px] xl:h-[30px] lg:h-[30px] md:h-[25px] sm:h-[20px] h-[20px]  bg-yellow-200 rounded"></button>
                 </div>
               </div>
 
               {/* sizes */}
               <div className="mb-6 grid ">
-                <h1 className="text-[20px] font-medium text-black mb-2 font-poppins">
+                <h1 className=" font-medium text-black mb-2 font-poppins">
                   Sizes :
                 </h1>
-                <div className="flex gap-2">
-                  <button className="w-[30px] h-[30px]  bg-black rounded text-white">
+                <div className="  gap-2 flex">
+                  <button className="xl:w-[30px] lg:w-[30px] md:w-[25px] sm:w-[20px] w-[20px] xl:h-[30px] lg:h-[30px] md:h-[25px] sm:h-[20px] h-[20px] bg-black rounded text-white">
                     3
                   </button>
-                  <button className="w-[30px] h-[30px]  bg-white rounded border-[1px] border-black">
+                  <button className="xl:w-[30px] lg:w-[30px] md:w-[25px] sm:w-[20px] w-[20px] xl:h-[30px] lg:h-[30px] md:h-[25px] sm:h-[20px] h-[20px]  bg-white rounded border-[1px] border-black">
                     4
                   </button>
-                  <button className="w-[30px] h-[30px]  bg-white rounded border-[1px] border-black">
+                  <button className="xl:w-[30px] lg:w-[30px] md:w-[25px] sm:w-[20px] w-[20px] xl:h-[30px] lg:h-[30px] md:h-[25px] sm:h-[20px] h-[20px]  bg-white rounded border-[1px] border-black">
                     5
                   </button>
-                  <button className="w-[30px] h-[30px]  bg-white rounded border-[1px] border-black">
+                  <button className="xl:w-[30px] lg:w-[30px] md:w-[25px] sm:w-[20px] w-[20px] xl:h-[30px] lg:h-[30px] md:h-[25px] sm:h-[20px] h-[20px]  bg-white rounded border-[1px] border-black">
                     6
                   </button>
-                  <button className="w-[30px] h-[30px]  bg-white rounded border-[1px] border-black">
+
+                  <button className="xl:w-[30px] lg:w-[30px] md:w-[25px] sm:w-[20px] w-[20px] xl:h-[30px] lg:h-[30px] md:h-[25px] sm:h-[20px] h-[20px] bg-white rounded border-[1px] border-black">
                     7
                   </button>
-                  <button className="w-[30px] h-[30px]   bg-white rounded border-[1px] border-black">
+                  <button className="xl:w-[30px] lg:w-[30px] md:w-[25px] sm:w-[20px] w-[20px] xl:h-[30px] lg:h-[30px] md:h-[25px] sm:h-[20px] h-[20px]   bg-white rounded border-[1px] border-black">
                     8
                   </button>
-                  <button className="w-[30px] h-[30px]   bg-white rounded border-[1px] border-black">
+                  <button className="xl:w-[30px] lg:w-[30px] md:w-[25px] sm:w-[20px] w-[20px] xl:h-[30px] lg:h-[30px] md:h-[25px] sm:h-[20px] h-[20px]  bg-white rounded border-[1px] border-black">
                     9
                   </button>
                 </div>
               </div>
               {/* buttons */}
-              <div className="flex gap-5 mb-4">
-                <button className="text-white bg-custom-pink  py-2 w-40">
+              <div className="grid gap-5 mb-4 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 grid-cols-1">
+                <button className="text-white bg-custom-pink  xl:py-2 xl:px-10 lg:py-2 lg:px-10 md:py-1 md:px-6 sm:py-1 sm:px-4  py-1 px-4">
                   ADD TO CART
                 </button>
-                <button className="text-white bg-black  py-2  w-40">
+                <button className="text-white bg-black    xl:py-2 xl:px-10 lg:py-2 lg:px-10 md:py-1 md:px-6 sm:py-1 sm:px-4  py-1 px-4">
                   BUY NOW
                 </button>
               </div>
 
-              <div>
-                <h1 className="text-[20px] font-medium text-black">
+              <div className="text-[11px] sm:text-[12px] md:text-[15px] lg:text-[16px] grid justify-start">
+                <h1 className=" font-medium text-black">
                   Do you have a question?
                 </h1>
-                <h1 className="text-[16px] font-medium text-gray-600 mb-2">
+                <h1 className="text-[8px] sm:text-[8px] md:text-[10px] lg:text-[12px] font-medium text-gray-600 mb-2">
                   Contact our customer service.
                 </h1>
-                <div className="grid grid-flow-col gap-5  justify-start">
+                <div className="grid grid-flow-col gap-5  justify-start text-[6px] sm:text-[8px] md:text-[10px] lg:text-[12px]">
                   <div className="flex flex-col items-center justify-start">
-                    <FaWhatsapp className="w-10 h-10" />
+                    <FaWhatsapp className="xl:w-[30px] lg:w-[30px] md:w-[25px] sm:w-[20px] w-[20px] xl:h-[30px] lg:h-[30px] md:h-[25px] sm:h-[20px] h-[20px] mb-1" />
                     <h1>WhatsApp</h1>
                     <h1>+91 123456789</h1>
                   </div>
                   <div className="flex flex-col items-center justify-start">
-                    <FaEnvelope className="w-10 h-10" />
+                    <FaEnvelope className="xl:w-[30px] lg:w-[30px] md:w-[25px] sm:w-[20px] w-[20px] xl:h-[30px] lg:h-[30px] md:h-[25px] sm:h-[20px] h-[20px] mb-1" />
                     <h1>Email</h1>
                     <h1>smilegirl@gmail.com</h1>
                   </div>
@@ -230,53 +230,53 @@ function aboutShoe() {
             </div>
           </div>
           <div className="mt-10 font-poppins">
-            <div className="mb-4 bg-gray-300 border-y-2 border-black py-2">
-              <h1 className="text-[20px] font-medium text-black ml-6">
+            <div className="mb-4 bg-gray-300 border-y-2 border-black xl:py-2 lg:py-2 md:py-1 sm:py-1 py-1">
+              <h1 className="text-[11px] sm:text-[12px] md:text-[15px] lg:text-[16px] font-medium text-black ml-6">
                 More Details
               </h1>
             </div>
-            <div className="grid grid-flow-col px-6 py-2 ">
+            <div className="grid xl:grid-flow-col px-6 py-2 gap-[20px]">
               <div>
-                <h1 className="text-[20px] font-medium text-black underline underline-offset-4">
+                <h1 className="text-[11px] sm:text-[12px] md:text-[15px] lg:text-[16px] font-medium text-black underline underline-offset-4">
                   About Product :
                 </h1>
-                <div className="mt-4 ml-2">
-                  <h1 className="text-[16px] font-medium text-gray-600 ">
+                <div className="mt-4 ml-2 text-[10px] sm:text-[10px] md:text-[13px] lg:text-[14px] text-gray-600 ">
+                  <h1 className="  ">
                     Colors : Black ,Maroon
                   </h1>
-                  <h1 className="text-[16px] font-medium text-gray-600 ">
+                  <h1 className="  ">
                     Gender : Ladies
                   </h1>
-                  <h1 className="text-[16px] font-medium text-gray-600 ">
+                  <h1 className="">
                     Material : Synthetic
                   </h1>
-                  <h1 className="text-[16px] font-medium text-gray-600 ">
+                  <h1 className=" ">
                     Type of Wear : Flatforms
                   </h1>
                 </div>
               </div>
               <div>
-                <h1 className="text-[20px] font-medium text-black underline underline-offset-4">
+                <h1 className="text-[11px] sm:text-[12px] md:text-[15px] lg:text-[16px] font-medium text-black underline underline-offset-4">
                   Delivery Fee :
                 </h1>
-                <div className="mt-4 ml-2">
-                  <h1 className="text-[16px] font-medium text-gray-600 ">
+                <div className="mt-4 ml-2 text-[10px] sm:text-[10px] md:text-[13px] lg:text-[14px] text-gray-600">
+                  <h1 className="">
                     - Delivery fees vary based on your location and order total.
                   </h1>
-                  <h1 className="text-[16px] font-medium text-gray-600 ">
+                  <h1 className="">
                     - Enjoy free delivery on orders over Rs 10,000
                   </h1>
                 </div>
               </div>
               <div>
-                <h1 className="text-[20px] font-medium text-black underline underline-offset-4">
+                <h1 className="text-[11px] sm:text-[12px] md:text-[15px] lg:text-[16px] font-medium text-black underline underline-offset-4">
                   Look After Product :
                 </h1>
-                <div className="mt-4 ml-2">
-                  <h1 className="text-[16px] font-medium text-gray-600 ">
+                <div className="mt-4 ml-2 text-[10px] sm:text-[10px] md:text-[13px] lg:text-[14px] text-gray-600">
+                  <h1 className="">
                     Just here for the care instructions?
                   </h1>
-                  <h1 className="text-[16px] font-medium text-gray-600 mt-6">
+                  <h1 className=" mt-6">
                     Yeah, we know it. <br />
                     Use a toothbrush or soft shoe brush to remove dirt.
                   </h1>
@@ -285,8 +285,8 @@ function aboutShoe() {
             </div>
           </div>
           <div className="mt-10 font-poppins">
-            <div className="mb-4 bg-gray-300 border-y-2 border-black py-2">
-              <h1 className="text-[20px] font-medium text-black ml-6">
+            <div className="mb-4 bg-gray-300 border-y-2 border-black xl:py-2 lg:py-2 md:py-1 sm:py-1 py-1">
+              <h1 className="text-[11px] sm:text-[12px] md:text-[15px] lg:text-[16px] font-medium text-black ml-6">
                 Reviews
               </h1>
             </div>
