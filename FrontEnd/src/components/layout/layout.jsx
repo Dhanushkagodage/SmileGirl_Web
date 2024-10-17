@@ -12,7 +12,7 @@ function layout({ children }) {
         <NavBar />
 
         {/* Content */}
-        <div className="xl:pb-14 lg:pb-14 md:pb-10 sm:pb-6 pb-6 pt-14 ">
+        <div className=" pt-14 ">
           {children}
         </div>
 

@@ -80,7 +80,7 @@ function aboutShoe() {
           </ul>
         </nav>
       </div>
-      <div className="  lg:px-26 xl:px-26 sm:px-8 md:px-20 px-8 ">
+      <div className="  lg:px-26 xl:px-26 sm:px-8 md:px-20 px-8 xl:pb-14 lg:pb-14 md:pb-10 sm:pb-6 pb-6">
         <div className="flex text-gray-500 font-poppins font-light items-center pt-16 xl:pb-3 lg:pb-3 md:pb-2 sm:pb-2 pb-2  ">
           <button
             className="bg-white rounded-full hover:bg-black-600 border-2 flex justify-center items-center xl:w-8 xl:h-8 lg:w-8 lg:h-8 md:w-6 md:h-6 sm:w-5 sm:h-5 w-5 h-5  mr-1"

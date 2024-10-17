@@ -59,7 +59,7 @@ function HomePage() {
         </div>
       </div>
 
-      <div className="w-full grid xl:mt-[60px] lg:mt-[60px] md:mt-[50px] sm:mt-[40px] mt-[20px] lg:px-26 xl:px-26 sm:px-8 md:px-20 px-8">
+      <div className="w-full grid xl:mt-[60px] lg:mt-[60px] md:mt-[50px] sm:mt-[40px] mt-[20px] lg:px-26 xl:px-26 sm:px-8 md:px-20 px-8 xl:pb-14 lg:pb-14 md:pb-10 sm:pb-6 pb-6">
         <div className="text-center grid">
           <h1 className="font-normal text-blacktext-[20px] sm:text-[25px] md:text-[30px] lg:text-[40px] xl:text-[48px] font-Poppins">
             This Month’s Best Sellers
