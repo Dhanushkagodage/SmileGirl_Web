@@ -60,7 +60,7 @@ function ShopPage() {
           </div>
         ))}
       </div>
-      <div className="flex justify-center xl:pt-10 lg:pt-10 md:pt-8 sm:pt-6 xs:pt-6 pt-6">
+      <div className="flex justify-center xl:pt-10 lg:pt-10 md:pt-8 sm:pt-6 xs:pt-6 pt-6 xl:pb-14 lg:pb-14 md:pb-10 sm:pb-6 pb-6">
         <Pagination />
       </div>
       </div>

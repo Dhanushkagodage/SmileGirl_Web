@@ -5,7 +5,7 @@ import Layout from "../../../components/layout/layout";
 function customizePage() {
   return (
     <Layout>
-      <div className="xl:mt-5 lg:mt-5 md:mt-3 sm:mt-2 mt-2 lg:px-26 xl:px-26 sm:px-8 md:px-20 px-8 ">
+      <div className="xl:mt-5 lg:mt-5 md:mt-3 sm:mt-2 mt-2 lg:px-26 xl:px-26 sm:px-8 md:px-20 px-8 xl:pb-14 lg:pb-14 md:pb-10 sm:pb-6 pb-6">
         <div className="grid grid-cols-1 items-center justify-center text-center ">
           <div>
             <h1 className="text-xl font-extrabold text-custom-pink sm:text-2xl md:text-3xl lg:text-4xl font-poppins">
